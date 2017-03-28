@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Compra de Camiseta</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<script src="script.js"></script>
+	</head>
+	<body>	
+		<form action="http://www.promocoesespetaculares.com.br/sistema/pascoa/cadastrarCliente.action">		
+			<fieldset>
+				<legend>Dados do Cliente</legend>
+				<div class="campo">
+					<label class="descricao">Nome:</label>
+					<input name="nome" type="text" placeholder="Bob" required/>
+				</div>
+				<div class="campo">
+					<label class="descricao">Sobrenome:</label>
+					<input name="sobrenome" type="text" placeholder="Esponja" required/>
+				</div>
+				<div class="campo">
+					<label class="descricao"> Data de Nascimento: </label>
+					<input name="nascimento" type="date" required/>
+				</div>
+				<div class="campo">
+					<label class="descricao"> Sexo: </label> 
+					<label><input name="sexo" type="radio" required/>Masculino</label>
+					<label><input name="sexo" type="radio" required/>Feminino</label>
+				</div>
+				<div class="campo">
+					<p>O que você acha de nossos produtos/serviços?</p>
+					<textarea name="resposta" placeholder="O melhor chocolate que eu costumo comprar é o UberCacauSuperLeitePlus"></textarea>
+				</div>
+			</fieldset>
+			<fieldset>
+				<legend>Dados da Compra</legend>
+				<div class="campo">
+					<label class="descricao">Nota Fiscal da Compra: </label>
+					<input name="nf" type="text" readonly required/>
+				</div>
+				<div class="campo">
+					<label class="descricao">ID da compra: </label>
+					<input name="id" type="text" readonly required/>
+				</div>
+				
+				<p>Items: <input id="additem" type="button" value="Adicionar"></p>
+				<div id="items">
+					
+				</div>
+				<div id="items-footer">
+					<label><span id="items-qtd">0</span> Items | Valor total: R$ <input name="total" value="0.00" readonly/></label>
+				</div>
+			</fieldset>
+			
+			<fieldset>
+				<legend>Promoção</legend>
+				<div class="campo">
+					<label class="descricao">Selecione seu brinde:</label>
+					<select name="brinde" required>
+						<option selected disabled value="">Selecione</option>
+						<option>Chocolate Amargo 200% Cacau</option>
+						<option>Caixa de Bomboms Nutella</option>
+						<option>Mini Cesta de Chocolate</option>
+						<option>Coelho de Pascoa de Pelúcia</option>
+					</select>
+				</div>
+				<div class="campo">
+					<p>Selecione os prêmios que você quer concorrer:</p>
+					<p><label><input name="premio[1]" type="checkbox"/>Viagem para Ilha de Pascoa</label></p>				
+					<p><label><input name="premio[2]" type="checkbox"/>Coelho Inflavel BunnysZord Tamanho Real</label></p>			
+					<p><label><input name="premio[3]" type="checkbox"/>Sal de Fruta Especial de Pascoa</label></p>			
+				</div>
+			</fieldset>
+			
+			<input type="submit" value="Finalizar Compra"/>
+
+		</form>
+	</body>
+</html>

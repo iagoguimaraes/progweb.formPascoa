@@ -1,0 +1,42 @@
+html, body{
+	margin: 0;
+	padding: 0;
+}
+
+fieldset{
+		margin: 20px;
+}
+
+.descricao{
+	display: inline-block;
+	width: 200px;
+}
+
+.campo{
+	margin: 10px 0 10px 0;
+}
+
+input[type="text"]{
+	height: 20px;
+	width: 300px;
+}
+
+textarea {
+	height: 150px;
+	width: 500px;
+}
+
+input[type="submit"]{
+	position: absolute;
+	left: 20px;
+	height: 40px;
+	width: 150px;
+}
+
+input[type="submit"]:hover{
+	cursor: pointer;
+}
+
+.item-div > *{
+	margin: 0 5px 10px 5px;
+}
