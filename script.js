@@ -72,8 +72,14 @@ window.addEventListener('load',function(){
 var qtdItems = 0;
 
 var produtos = [
-	{produto: 'produto 1', valor: 150.00},
-	{produto: 'produto 2', valor: 250.00},
+	{produto: 'Bicicleta', valor: 250.99},
+	{produto: 'Carrinho', valor: 45.99},
+	{produto: 'Boneca', valor: 30.99},
+	{produto: 'Zurg', valor: 180.99},
+	{produto: 'Chewbakka', valor: 110.99},
+	{produto: 'Trampulim', valor: 250.99},
+	{produto: 'Urso de Pelucia', valor: 90.99},
+	{produto: 'Pistola .38', valor: 3000.99},
 ];
 
 function GerarID(){
@@ -90,5 +96,15 @@ function AtualizarValores(){
 		total += Number(precos[i].value);	
 	}
 	
-	document.querySelector('input[name="total"]').value = total;
+	document.querySelector('input[name="total"]').value = total.toFixed(2);
+	
+	validarForm();
+}
+
+function validarForm(){
+	var sbmtBtn = document.querySelector('input[type="submit"]');
+	sbmtBtn.style.display = 'none';
+	if(qtdItems > 0){
+		sbmtBtn.style.display = 'block';
+	}
 }
